@@ -4,10 +4,9 @@ import time
 import math
 import sys
 from pygame.locals import *
-import io
 
 
-class CarAgent:
+class Car:
     def __init__(self, x, y, width, height, color):
         self.width = width
         self.height = height
@@ -140,7 +139,7 @@ class Game:
         self.win = pygame.display.set_mode((self.width, self.height))
 
         self.clock = pygame.time.Clock()
-        self.car = CarAgent(250, 200, 100, 50, (255, 0, 0))
+        self.car = Car(250, 200, 100, 50, (255, 0, 0))
         self.log = False
 
         self.car1_pos = pygame.Vector2(30, 40)
