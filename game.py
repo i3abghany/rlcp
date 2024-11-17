@@ -45,7 +45,7 @@ class CarAgent:
         return rotated_corners
 
     def draw(self, win):
-        car = pygame.image.load("car.png")
+        car = pygame.image.load("assets/car.png")
         car = pygame.transform.scale(car, (self.width, self.height))
         car = pygame.transform.rotate(car, self.angle)
         win.blit(
@@ -203,11 +203,11 @@ class Game:
                 if event.type == pygame.QUIT:
                     run = False
 
-            bg = pygame.image.load("bg.png")
+            bg = pygame.image.load("assets/bg.png")
             bg = pygame.transform.scale(bg, (400, 400))
             self.win.blit(bg, (0, 0))
 
-            carimg = pygame.image.load("bcar.png")
+            carimg = pygame.image.load("assets/bcar.png")
             carimg = pygame.transform.scale(carimg, (50, 100))
 
             self.win.blit(carimg, self.car1_pos)
